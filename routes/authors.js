@@ -9,7 +9,6 @@ router.get('/', async (req,res) =>{
         searchOptions.name = new RegExp(req.query.name, 'i')
     }
     try {
-        //({}) emptya wata hich conditionakman nya
 const authors =await Author.find(searchOptions)
 //authors ka nawe hamu authorakana yaksana baw authors variable a
 res.render('authors/index',{ authors: authors,
